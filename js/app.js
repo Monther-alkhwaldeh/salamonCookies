@@ -1,6 +1,6 @@
 'use strict';
 
-const Seattle = {
+const seattle = {
   name: 'Seattle',
   openTime: ['6am', '7am', '8am', '9am', '10pm', '11pm', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', 'Total'],
   min: 23,
@@ -20,26 +20,26 @@ const Seattle = {
 
 
   render: function () {
-    const container = document.getElementById('seattle');
+    const container = document.getElementById('shops');
     console.log(container);
     const articleE1 = document.createElement('article');
     container.appendChild(articleE1);
     const h2e1 = document.createElement('h2');
     articleE1.appendChild(h2e1);
-    h2e1.textContent = Seattle.name;
+    h2e1.textContent = seattle.name;
     const ule1 = document.createElement('ul');
     articleE1.appendChild(ule1);
-    for (let i = 0; i < Seattle.openTime.length; i++) {
+    for (let i = 0; i < seattle.openTime.length; i++) {
       const lie1 = document.createElement('li');
       ule1.appendChild(lie1);
-      lie1.textContent = `${Seattle.openTime[i]} : ${Seattle.purshes[i]} cookies`;
+      lie1.textContent = `${seattle.openTime[i]} : ${seattle.purshes[i]} cookies`;
 
     }
 
   },
 };
 
-const Tokyo = {
+const tokyo = {
   name: 'Tokyo',
   openTime: ['8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm', '9pm', 'Total'],
   min: 3,
@@ -57,25 +57,25 @@ const Tokyo = {
     this.purshes[14] = this.sale;
   },
   render: function () {
-    const container = document.getElementById('tokyo');
+    const container = document.getElementById('shops');
     console.log(container);
     const articleE1 = document.createElement('article');
     container.appendChild(articleE1);
     const h2e1 = document.createElement('h2');
     articleE1.appendChild(h2e1);
-    h2e1.textContent = Tokyo.name;
+    h2e1.textContent = tokyo.name;
     const ule1 = document.createElement('ul');
     articleE1.appendChild(ule1);
-    for (let i = 0; i < Tokyo.openTime.length; i++) {
+    for (let i = 0; i < tokyo.openTime.length; i++) {
       const lie1 = document.createElement('li');
       ule1.appendChild(lie1);
-      lie1.textContent = `${Tokyo.openTime[i]} : ${Tokyo.purshes[i]} cookies`;
+      lie1.textContent = `${tokyo.openTime[i]} : ${tokyo.purshes[i]} cookies`;
 
     }
 
   },
 };
-const Dubai = {
+const dubai = {
   name: 'Dubai',
   openTime: ['8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm', '9pm', 'Total'],
   min: 11,
@@ -93,26 +93,26 @@ const Dubai = {
     this.purshes[14] = this.sale;
   },
   render: function () {
-    const container = document.getElementById('dubai');
+    const container = document.getElementById('shops');
     console.log(container);
     const articleE1 = document.createElement('article');
     container.appendChild(articleE1);
     const h2e1 = document.createElement('h2');
     articleE1.appendChild(h2e1);
-    h2e1.textContent = Dubai.name;
+    h2e1.textContent = dubai.name;
     const ule1 = document.createElement('ul');
     articleE1.appendChild(ule1);
-    for (let i = 0; i < Dubai.openTime.length; i++) {
+    for (let i = 0; i < dubai.openTime.length; i++) {
       const lie1 = document.createElement('li');
       ule1.appendChild(lie1);
-      lie1.textContent = `${Dubai.openTime[i]} : ${Dubai.purshes[i]} cookies`;
+      lie1.textContent = `${dubai.openTime[i]} : ${dubai.purshes[i]} cookies`;
 
     }
 
   },
 };
 
-const Paris = {
+const paris = {
   name: 'Paris',
   openTime: ['8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm', '9pm', 'Total'],
   min: 20,
@@ -130,26 +130,26 @@ const Paris = {
     this.purshes[14] = this.sale;
   },
   render: function () {
-    const container = document.getElementById('paris');
+    const container = document.getElementById('shops');
     console.log(container);
     const articleE1 = document.createElement('article');
     container.appendChild(articleE1);
     const h2e1 = document.createElement('h2');
     articleE1.appendChild(h2e1);
-    h2e1.textContent = Paris.name;
+    h2e1.textContent = paris.name;
     const ule1 = document.createElement('ul');
     articleE1.appendChild(ule1);
-    for (let i = 0; i < Paris.openTime.length; i++) {
+    for (let i = 0; i < paris.openTime.length; i++) {
       const lie1 = document.createElement('li');
       ule1.appendChild(lie1);
-      lie1.textContent = `${Paris.openTime[i]} : ${Paris.purshes[i]} cookies`;
+      lie1.textContent = `${paris.openTime[i]} : ${paris.purshes[i]} cookies`;
 
     }
 
   },
 };
 
-const Lima = {
+const lima = {
   name: 'Lima',
   openTime: ['8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm', '9pm', 'Total'],
   min: 2,
@@ -167,19 +167,19 @@ const Lima = {
     this.purshes[14] = this.sale;
   },
   render: function () {
-    const container = document.getElementById('lima');
+    const container = document.getElementById('shops');
     console.log(container);
     const articleE1 = document.createElement('article');
     container.appendChild(articleE1);
     const h2e1 = document.createElement('h2');
     articleE1.appendChild(h2e1);
-    h2e1.textContent = Lima.name;
+    h2e1.textContent = lima.name;
     const ule1 = document.createElement('ul');
     articleE1.appendChild(ule1);
-    for (let i = 0; i < Paris.openTime.length; i++) {
+    for (let i = 0; i < lima.openTime.length; i++) {
       const lie1 = document.createElement('li');
       ule1.appendChild(lie1);
-      lie1.textContent = `${Lima.openTime[i]} : ${Lima.purshes[i]} cookies`;
+      lie1.textContent = `${lima.openTime[i]} : ${lima.purshes[i]} cookies`;
 
     }
   },
@@ -190,16 +190,16 @@ const Lima = {
 function hourlycustomers(min, max) {
   return Math.floor(Math.random() * (max - min) + min);
 }
-Seattle.getavg();
-Seattle.render();
-Tokyo.getavg();
-Tokyo.render();
-Dubai.getavg();
-Dubai.render();
-Paris.getavg();
-Paris.render();
-Lima.getavg();
-Lima.render();
+seattle.getavg();
+seattle.render();
+tokyo.getavg();
+tokyo.render();
+dubai.getavg();
+dubai.render();
+paris.getavg();
+paris.render();
+lima.getavg();
+lima.render();
 
 
 
