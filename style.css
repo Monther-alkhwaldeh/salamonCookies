@@ -1,0 +1,6 @@
+table,tr,th{
+    border: 1px solid red;
+}
+table,tr,td{
+    border:1px solid red;
+}
