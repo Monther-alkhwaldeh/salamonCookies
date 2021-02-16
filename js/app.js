@@ -22,24 +22,6 @@ function Shopsbranch(name,min, max, avg, purshes,total,) {
   this.total=total;
 }
 
-// function headerRow(){
-//   const conatainer = document.getElementById('shops');
-//   const articleE1 = document.createElement('article');
-//   conatainer.appendChild(articleE1);
-//   const tabelE1 = document.createElement('table');
-//   articleE1.appendChild(tabelE1);
-//   const hRowe1 = document.createElement('tr');
-//   articleE1.appendChild(hRowe1);
-//   const th1E2 = document.createElement('th');
-//   hRowe1.appendChild(th1E2);
-//   th1E2.textContent = 'branches';
-//   for (let i = 0; i < openTime.length; i++) {
-//     const th1E1=document.createElement('th');
-//     hRowe1.appendChild(th1E1);
-//     th1E1.textContent = openTime[i];
-//   }
-// }
-
 Shopsbranch.prototype.getCustp = function () {
   for (let i = 0; i<openTime1.length; i++) {
     this.purshes[i] = Math.floor(hourlycustomers(this.min, this.max) * this.avg);
@@ -54,7 +36,7 @@ Shopsbranch.prototype.render = function () {
   const tde1 = document.createElement('td');
   hRowe2.appendChild(tde1);
   tde1.textContent = this.name;
-  for (let i = 0; i <(this.purshes.length)-1; i++) {
+  for (let i = 0; i <=(this.purshes.length)-2; i++) {
     const tde2 = document.createElement('td');
     hRowe2.appendChild(tde2);
     tde2.textContent = this.purshes[i];
@@ -62,46 +44,7 @@ Shopsbranch.prototype.render = function () {
   }
 };
 
-// const hRowe3=document.createElement('tr');
-// articleE1.appendChild(hRowe3);
-// const tde3=document.createElement('td');
-// hRowe3.appendChild(tde3);
-// tde3.textContent='Total';
 
-// const hRowe2=document.createElement('tr');
-// articleE1.appendChild(hRowe2);
-// const tde1=document.createElement('td');
-// hRowe2.appendChild(tde1);
-// tde1.textContent=this.name;
-// for(let i=0;i<this.openTime.length;i++){
-//   const tde2=document.createElement('td');
-//   hRowe2.appendChild(tde2);
-//   tde2.textContent=this.purshes[i];
-// }
-// tabelE1.appendChild(hRowe1);
-// const dataRow=document.createElement('tr');
-// tabelE1.appendChild(dataRow);
-// const td1E1=document.createElement('td');
-// dataRow.appendChild(td1E1);
-// td1E1.textContent=`${this.purshes} ${this.sale}`;
-// const container = document.getElementById('shops');
-// console.log(container);
-// const articleE1 = document.createElement('article');
-// container.appendChild(articleE1);
-// const h2e1 = document.createElement('h2');
-// articleE1.appendChild(h2e1);
-// h2e1.textContent = this.name;
-// const ule1 = document.createElement('ul');
-// articleE1.appendChild(ule1);
-// for (let i = 0; i < this.openTime.length; i++) {
-//   const lie1 = document.createElement('li');
-//   ule1.appendChild(lie1);
-//   lie1.textContent = `${this.openTime[i]} : ${this.purshes[i]} cookies`;
-
-// -------------------------------------------------------------------
-
-
-// ----------------------------------------------------------------
 const seattle = new Shopsbranch(
   'Seattle',
   23,
