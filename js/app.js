@@ -44,7 +44,6 @@ Shopsbranch.prototype.render = function () {
   }
 };
 
-
 const seattle = new Shopsbranch(
   'Seattle',
   23,
