@@ -1,4 +1,5 @@
 'use strict';
+let openTime=['6am', '7am', '8am', '9am', '10pm', '11pm', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', 'Total'];
 function Shopsbranch(name, openTime, min, max, avg, purshes) {
   this.name = name;
   this.openTime = openTime;
@@ -22,13 +23,12 @@ function headerRow(){
   const th1E2 = document.createElement('th');
   hRowe1.appendChild(th1E2);
   th1E2.textContent = 'branches';
-  for (let i = 0; i < this.openTime.length; i++) {
+  for (let i = 0; i < openTime.length; i++) {
     const th1E1=document.createElement('th');
     hRowe1.appendChild(th1E1);
-    th1E1.textContent = this.openTime[i];
+    th1E1.textContent = openTime[i];
   }
 }
-headerRow();
 Shopsbranch.prototype.getCustp = function () {
   for (let i = 0; i <= this.openTime.length; i++) {
     this.purshes[i] = Math.floor(hourlycustomers(this.min, this.max) * this.avg);
