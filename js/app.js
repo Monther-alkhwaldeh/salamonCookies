@@ -13,13 +13,14 @@ for(let i=0; i<openTime1.length;i++){
   headR.textContent=openTime1[i];
 }
 
-function Shopsbranch(name,min, max, avg, purshes,total,) {
+function Shopsbranch(name,min, max, avg, purshes,total) {
   this.name = name;
   this.min = min;
   this.max = max;
   this.avg = avg;
   this.purshes = purshes;
   this.total=total;
+
 }
 
 Shopsbranch.prototype.getCustp = function () {
@@ -43,8 +44,26 @@ Shopsbranch.prototype.render = function () {
     TotalofTotal[i]+=this.purshes[i];
   }
 };
+// -------------------------------------------------------
 
+const form = document.getElementById('newbranch');
+form.addEventListener('submit',function (event) {
+  event.preventDefault();
 
+  const name = event.target.name.value;
+  const min=event.target.min.value;
+  const max=event.target.max.value;
+  const avg=event.target.avg.value;
+  tabel1.deleteRow(-1);
+
+  const amman= new Shopsbranch(name,min,max,avg,[],0);
+  amman.getCustp();
+  amman.render();
+  footer();
+  form.reset();
+});
+
+// -------------------------------------------
 const seattle = new Shopsbranch(
   'Seattle',
   23,
@@ -102,13 +121,16 @@ function hourlycustomers(min, max) {
   return Math.floor(Math.random() * (max - min) + min);
 }
 
-const footRow=document.createElement('tr');
-tabel1.appendChild(footRow);
-const fth=document.createElement('th');
-footRow.appendChild(fth);
-fth.textContent='TotalofTotal';
-for (let i = 0; i < TotalofTotal.length; i++) {
-  const tdee= document.createElement('td');
-  footRow.appendChild(tdee);
-  tdee.textContent=TotalofTotal[i];
+function footer() {
+  const footRow=document.createElement('tr');
+  tabel1.appendChild(footRow);
+  const fth=document.createElement('th');
+  footRow.appendChild(fth);
+  fth.textContent='TotalofTotal';
+  for (let i = 0; i < TotalofTotal.length; i++) {
+    const tdee= document.createElement('td');
+    footRow.appendChild(tdee);
+    tdee.textContent=TotalofTotal[i];
+  }
 }
+footer();
